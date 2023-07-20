@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Header } from "@/components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +29,9 @@ export default function RootLayout({
         )}
       >
         <ThemeWrapper attribute="class" defaultTheme="dark">
-          {children}
+          <Header />
+
+          <main className="mx-auto max-w-2xl">{children}</main>
         </ThemeWrapper>
       </body>
     </html>
